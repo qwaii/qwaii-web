@@ -281,8 +281,88 @@
       gap: 30px;
       flex-wrap: wrap;
     }
+.brand-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
 
-    @media (max-width: 800px) {
+.hero-art {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(242,138,114,.25), transparent 32%),
+    radial-gradient(circle at 78% 24%, rgba(217,79,109,.18), transparent 30%),
+    linear-gradient(135deg, #fff, #f4e9e5);
+}
+
+.hero-art::after {
+  content: none;
+}
+
+.hero-box {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 35px rgba(42, 28, 31, .15));
+}
+
+.hero-box.dulce {
+  width: 38%;
+  left: 6%;
+  bottom: 4%;
+  z-index: 3;
+}
+
+.hero-box.alicia {
+  width: 40%;
+  left: 33%;
+  bottom: 5%;
+  z-index: 4;
+}
+
+.hero-box.chapuzon {
+  width: 30%;
+  right: 3%;
+  bottom: 7%;
+  z-index: 2;
+}
+
+.game-image {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+    @media (max-width: 800px) {.brand-logo img {
+  width: 125px;
+}
+
+.hero-art {
+  min-height: 390px;
+}
+
+.hero-box.dulce {
+  width: 42%;
+  left: 2%;
+}
+
+.hero-box.alicia {
+  width: 44%;
+  left: 29%;
+}
+
+.hero-box.chapuzon {
+  width: 33%;
+  right: 0;
+}
       .nav-links {
         display: none;
       }
@@ -317,7 +397,9 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="#">Qwaii <span>Studio</span></a>
+    <a class="brand-logo" href="#">
+  <img src="assets/images/qwaii-studio-logo.png" alt="Qwaii Studio">
+</a>
 
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="#juegos">Juegos</a>
@@ -351,8 +433,11 @@
       </div>
     </div>
 
-    <div class="hero-art"></div>
-  </section>
+    <div class="hero-art">
+  <img class="hero-box dulce" src="assets/images/dulce-mezcla-box.png" alt="Caja de Dulce Mezcla">
+  <img class="hero-box alicia" src="assets/images/alicias-tea-garden-box.png" alt="Caja de Alicia’s Tea Garden">
+  <img class="hero-box chapuzon" src="assets/images/chapuzon-box.png" alt="Caja de Chapuzón">
+</div>  </section>
 
   <section class="section white" id="juegos">
     <div class="container">
@@ -372,7 +457,9 @@
       <div class="games">
 
         <article class="game">
-          <div class="game-image"></div>
+          <div class="game-image">
+  <img src="assets/images/dulce-mezcla-box.png" alt="Dulce Mezcla">
+</div>
           <div class="game-copy">
             <h3>Dulce Mezcla</h3>
             <p>
@@ -383,7 +470,9 @@
         </article>
 
         <article class="game">
-          <div class="game-image"></div>
+         <div class="game-image">
+  <img src="assets/images/alicias-tea-garden-box.png" alt="Alicia’s Tea Garden">
+</div>
           <div class="game-copy">
             <h3>Alicia’s Tea Garden</h3>
             <p>
@@ -394,7 +483,9 @@
         </article>
 
         <article class="game">
-          <div class="game-image"></div>
+          <div class="game-image">
+  <img src="assets/images/chapuzon-box.png" alt="Chapuzón">
+</div>
           <div class="game-copy">
             <h3>Chapuzón</h3>
             <p>
