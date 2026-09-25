@@ -159,3 +159,18 @@ dialog p { line-height: 1.6; }
 .socials a { font-size: 12px; }
 .spark { padding: 7px 12px; border-radius: 10px; background: #fcf7f1b8; }
 @media (min-width:1051px) { .hero-actions { flex-wrap: wrap; } }
+
+/* Navigation between the published Qwaii sites. */
+.universe-section { padding: 52px 0 62px; background: #fffaf7; border-top: 1px solid var(--line); }
+.universe-heading { max-width: 560px; margin-bottom: 24px; }
+.universe-heading p:last-child { color: var(--muted); }
+.universe-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.universe-card { display: grid; align-content: start; gap: 8px; min-height: 190px; padding: 23px 25px; border: 1px solid #c9dff4; border-radius: 20px; background: #ecf6ff; box-shadow: 0 8px 24px #1020390b; transition: transform .2s, box-shadow .2s; }
+.universe-card:hover { transform: translateY(-3px); box-shadow: 0 13px 30px #10203918; }
+.universe-card.cozy { border-color: #cee6d6; background: #eef8f0; }
+.universe-card strong { font: 500 25px/1.15 var(--serif); }
+.universe-card > span { color: var(--muted); }
+.universe-action { margin-top: 9px; font-size: 13px; font-weight: 700; }
+@media(max-width:1050px) { .nav-links { gap: 12px; font-size: 12px; } }
+@media(max-width:600px) { .universe-section { padding: 38px 0 46px; } .universe-grid { grid-template-columns: 1fr; } .universe-card { min-height: 0; } }
+@media(prefers-reduced-motion:reduce) { .universe-card { transition: none; } }
